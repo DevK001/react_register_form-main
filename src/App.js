@@ -2,7 +2,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import Navbar from './Components/Navbar';
 import {  useState } from 'react';
-import Header from './Header';
+// import Header from './Header';
 import Meals from './Components/meals/Meals';
 import Cart from './Components/Cart/Cart';
 import CartProvider from './store/CartProvider';

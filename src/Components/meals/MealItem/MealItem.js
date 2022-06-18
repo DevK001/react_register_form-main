@@ -10,7 +10,6 @@ const MealItem = (props) => {
     const cartCtx = useContext(CartContext);
     const price = `$${props.price.toFixed(2)}`;
     
-    const [id, setid] = useState("");
     const [uniqueUser, setuniqueUser] = useState("");
     const [productId, setproductId] = useState("");
     const [qty, setqty] = useState("");
@@ -20,7 +19,7 @@ const MealItem = (props) => {
             id: props.id,
             name: props.name,
             amount: amount,
-            price: props.price
+            price: props.price,
         });
         setuniqueUser(props.Uid);
         setproductId(props.id);

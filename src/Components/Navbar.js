@@ -1,7 +1,7 @@
 import "./Navbar.style.css";
 // import { Link } from "react-router-dom";
 import HeaderCartButton from './layout/HeaderCartButton';
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 const Navbar = (props) => {
   return (
@@ -21,6 +21,7 @@ const Navbar = (props) => {
         <HeaderCartButton onClick={props.onShowCart} />
         </li>
       </ul>
+      
     </header>
         
   );
