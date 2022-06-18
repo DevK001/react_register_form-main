@@ -21,6 +21,7 @@ const HeaderCartButton = props => {
         </span>
     </button>
     );
+    
 };
 
 export default HeaderCartButton;

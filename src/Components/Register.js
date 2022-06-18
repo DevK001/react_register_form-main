@@ -1,5 +1,5 @@
 import React from "react";
-import DataService from "./Service/DataService";
+import DataService from "../Service/DataService";
 import axios from "axios";
 
 const API_URL = "https://api.shilpimultiplex.com/api/Auth/";

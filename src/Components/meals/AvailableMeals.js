@@ -1,7 +1,7 @@
 import React ,{ useState} from "react";
 import axios from 'axios';
 import Card from '../UI/Card';
-//import MealItem from './MealItem/MealItem';
+import MealItem from './MealItem/MealItem';
 import classes from './AvailableMeals.module.css';
 
 
@@ -39,40 +39,49 @@ import classes from './AvailableMeals.module.css';
   function AvailableMeals(props) {
     const [data, setData] = useState([]);
     axios.get(API_URL + props.Uid).then((result) => {
-      console.log(result.data);
+      // console.log(result.data);
       setData(result.data);
     });
   
-  // const availableMeals = () => {
-  //   const mealsList = DUMMY_MEALS.map((meal) => (
-  //   <MealItem 
-  //   key = {meal.id}
-  //   id= {meal.id} 
-  //   name = {meal.name}
-  //   description={meal.description} 
-  //   price={meal.price}
-  //   />
-  //   ))};
+  
+    const mealsList = data.map((meal) => (
+      <>        <br />
+      <Card>
+    <MealItem 
+    key = {meal.id}
+    id= {meal.id} 
+    name = {meal.productName}
+    description={meal.desc} 
+    price={meal.price}
+    />
+    </Card>
+   <br />
+   </>
+
+    ));
 
   return (
-    <section className={classes.meals}>
-      <br />
-      <br />
-        <ul>
-          {data.map((meal) => (
-            <div className={classes.meal}>
-              <Card>
-                <h3>{meal.productName}</h3>
-                <img src={meal.imagePath} alt="" />
-                <div className={classes.description}>{meal.desc}</div>
-                <div className={classes.price}>{meal.price}$</div>
-                <br />
-              </Card>
-              <br />
-            </div>
-          ))}
-        </ul>
-    </section>
+    <>
+    {mealsList}
+    </>
+    // <section className={classes.meals}>
+    //   <br />
+    //   <br />
+    //     <ul>
+    //       {data.map((meal) => (
+    //         <div className={classes.meal}>
+    //           <Card>
+    //             <h3>{meal.productName}</h3>
+    //             <img src={meal.imagePath} alt="" />
+    //             <div className={classes.description}>{meal.desc}</div>
+    //             <div className={classes.price}>{meal.price}$</div>
+    //             <br />
+    //           </Card>
+    //           <br />
+    //         </div>
+    //       ))}
+    //     </ul>
+    // </section>
   );
 }
 

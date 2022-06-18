@@ -1,11 +1,12 @@
-//import Register from './Register';
-//import Login from './Login';
+import Register from './Components/Register';
+import Login from './Components/Login';
+import Navbar from './Components/Navbar';
 import {  useState } from 'react';
-import Header from './Components/layout/Header';
+import Header from './Header';
 import Meals from './Components/meals/Meals';
 import Cart from './Components/Cart/Cart';
 import CartProvider from './store/CartProvider';
-
+import {Route , Routes} from "react-router-dom"
 
 
 function App() {
@@ -19,16 +20,18 @@ function App() {
     setCartIsShown(false);
   };
   return (
-    <main className="App">
-      {/* <Register/> */}
-      <CartProvider>
-      {cartIsShown && <Cart onClose={hideCartHandler}/>}
-      <Header onShowCart={showCartHandler} />
-      <main>
-        <Meals />
-      </main>
-    </CartProvider>
-    </main>
+    
+   <CartProvider>
+    {cartIsShown && <Cart onClose={hideCartHandler}/>}
+    <Navbar onShowCart={showCartHandler}/>
+    <div>
+      <Routes>
+    <Route path="/" element={<Meals/>} />
+        <Route path="/Register.js" element={<Register />} />
+        <Route path="/Login.js" element={<Login />} />
+      </Routes>
+    </div>
+   </CartProvider>
   );
 }
 
