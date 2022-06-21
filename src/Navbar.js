@@ -1,6 +1,6 @@
 import "./Navbar.style.css";
 // import { Link } from "react-router-dom";
-import HeaderCartButton from './HeaderCartButton';
+import HeaderCartButton from './Components/layout/HeaderCartButton';
 import {Link} from "react-router-dom";
 
 const Navbar = (props) => {

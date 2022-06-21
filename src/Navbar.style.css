@@ -4,6 +4,7 @@
 
 body{
     margin: 0;
+    background-color: orange;
 }
 
 .nav{
@@ -12,7 +13,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items:0 1rem;
-    gap: 1 rem;
+    gap: 2 rem;
     padding:0 1rem;
 }
 .site-title{
@@ -21,7 +22,7 @@ body{
 }
 .nav ul{
     padding: 0;
-    margin: 0;
+    margin: -163px;
     list-style: none;
     display:flex;
     align-items: center;
@@ -31,13 +32,13 @@ body{
     color: inherit;
     text-decoration: none;
     font-size: larger;
-    height: 100%;
+    height: 10%;
     display: flex;
     align-items: stretch;
-    padding: .25rem;
+    padding: -0.25;
 }
 .nav li:hover{
-    background-color: bisque;
+    background-color: olivedrab;
 }
 .nav li:active{
     background-color: #fff;
