@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import "./login.css";
 export default function Login() {
   const API_URL = "https://api.shilpimultiplex.com/api/Auth/";
 
@@ -18,14 +19,15 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <section>
-      <form>
+    <div className="BodyL">
+      <section id="sec">
+      <form >
         <h5>Sign In</h5>
-        <div>
-          <label>Phone Number</label>
+        <div id="Lid">
+          <label >Phone Number:</label>
           <div>
             <input
+            id="inpL"
               type="text"
               value={phoneNumber}
               onChange={(e) => {
@@ -34,10 +36,11 @@ export default function Login() {
             />
           </div>
         </div>
-        <div>
-          <label>Password</label>
+        <div id="Lid">
+          <label>Password:</label>
           <div>
             <input
+            id="inpL"
               type="password"
               value={password}
               onChange={(e) => {
@@ -47,7 +50,7 @@ export default function Login() {
           </div>
         </div>
 
-        <Link to="/"><button type="submit" onClick={Login}>
+        <Link to="/"><button type="submit" id="but" onClick={Login}>
           Sign in
           </button>
         </Link>

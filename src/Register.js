@@ -1,6 +1,7 @@
 import React from "react";
 import DataService from "./Service/DataService";
 import axios from "axios";
+import './register.css';
 
 const API_URL = "https://api.shilpimultiplex.com/api/Auth/";
 
@@ -94,8 +95,11 @@ class Register extends React.Component {
     return (
       <>
         <section>
-          <form>
-            <label>Name : </label>
+         
+          <form id="sec">
+            <h5>Sign up</h5>
+            <div id="Lid">
+            <label id="lab">Name : </label>
             <input
               placeholder="Name"
               name="name"
@@ -103,8 +107,10 @@ class Register extends React.Component {
               value={this.state.name}
               onChange={this.changenamehandler}
             />
-
-            <label>Email : </label>
+            </div>
+            
+            <div id="Lid">
+            <label id="lab">Email : </label>
             <input
               placeholder="Email"
               name="email"
@@ -112,8 +118,9 @@ class Register extends React.Component {
               value={this.state.email}
               onChange={this.changemailhandler}
             />
-
-            <label>Phone : </label>
+            </div>
+            <div id="Lid">
+            <label id="lab">Phone : </label>
             <input
               placeholder="phone"
               name="phone"
@@ -121,8 +128,9 @@ class Register extends React.Component {
               value={this.state.phone}
               onChange={this.changephonehandler}
             />
-
-            <label>Password : </label>
+            </div>
+            <div id="Lid">
+            <label id="lab">Password : </label>
             <input
               type="password"
               placeholder="password"
@@ -131,21 +139,28 @@ class Register extends React.Component {
               value={this.state.password}
               onChange={this.changepasshandler}
             />
+            </div>
 
-            <button className="btn btn-success" onClick={this.saveUser}>
+            <button id="but" onClick={this.saveUser}>
               Create user
             </button>
           </form>
         </section>
-        <form>
+        <form id="sec2">
           {/*modal for otp*/}
-          <h5>Enter your OTP</h5>
+          <h5 id="h">Enter your OTP</h5>
+          <div id="LidOtp">
+          <label id="lab">GetOtp : </label>
           <input
             type="text"
+            name="Otp"
+            placeholder="Enter Otp"
             value={this.state.otp}
             onChange={this.changOTPhandler}
           />
-          <button type="button" onClick={this.VeryfiyUser}>
+          </div>
+          
+          <button id="but" type="button" onClick={this.VeryfiyUser}>
             Ok
           </button>
         </form>
