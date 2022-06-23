@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 const Navbar = (props) => {
   return (
     <header className="nav">
-      <h1>ReactMeals</h1>
+      <h1>Happily Fresh</h1>
       <ul>
         <li>
           <Link to="/">Home</Link>
